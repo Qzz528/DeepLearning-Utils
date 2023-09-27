@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+'当padding设置为None，自动计算padding值保持tensor尺寸不变或者按stride整数倍变化的卷积'
 import torch
 import torch.nn as nn
 import math
