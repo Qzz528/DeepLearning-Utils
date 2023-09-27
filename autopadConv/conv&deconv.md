@@ -12,7 +12,7 @@
 
 卷积运算方式为：
 
-![total](pic\total.gif)
+![total](/pic/total.gif)
 
 其中红框部分的输入数据与卷积核尺寸相同，两者所有位置对应相乘，再将所有位置的乘积求和，可得输出数据中的红框部分。
 
@@ -25,7 +25,7 @@
 
 以一维数据一维卷积为例，对单个样本：
 
-![channel](pic\channel.png)
+![channel](/pic/channel.png)
 
 卷积核有out_channels组，每一组的通道数与输入数据通道数in_channels相同，用于与输入数据进行卷积计算，计算后就得到输出数据的一个通道。因此out_channels组卷积全部计算完后，输出数据的通道为out_channels。
 
