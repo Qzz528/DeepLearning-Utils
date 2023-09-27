@@ -12,7 +12,7 @@
 
 卷积运算方式为：
 
-![total](/pic/total.gif)
+![total](pic/total.gif)
 
 其中红框部分的输入数据与卷积核尺寸相同，两者所有位置对应相乘，再将所有位置的乘积求和，可得输出数据中的红框部分。
 
@@ -25,7 +25,7 @@
 
 以一维数据一维卷积为例，对单个样本：
 
-![channel](/pic/channel.png)
+![channel](pic/channel.png)
 
 卷积核有out_channels组，每一组的通道数与输入数据通道数in_channels相同，用于与输入数据进行卷积计算，计算后就得到输出数据的一个通道。因此out_channels组卷积全部计算完后，输出数据的通道为out_channels。
 
@@ -35,7 +35,7 @@
 
 仍以一维数据一维卷积为例，但为展示数据尺寸变化，将输入输出数据通道数设为1，对单个样本：
 
-![size](/pic/size.gif)
+![size](pic/size.gif)
 
 上述的卷积方式是最常见的，最终输出数据尺寸$ width' = width-kernelsize + 1 $.
 
@@ -76,19 +76,19 @@ conv = nn.Conv1d(in_channels = 3,  #输入通道数
 
   //表示地板除法，即除法后结果向下取整，舍去小数（余数）。
 
-![size-s](/pic/size-s.gif)
+![size-s](pic/size-s.gif)
 
 - W：进行卷积运算数据的实际尺寸，有 $ W=width +2*padding $.
 
   padding：在原始数据两侧各填充长度为padding的数据，相当于增加了卷积运算数据的尺寸。
 
-![size-p](/pic/size-p.gif)
+![size-p](pic/size-p.gif)
 
 - K：卷积核的实际尺寸，有 $K= dilation*(kernelsize-1) +1 $.
 
   dilation：对卷积核内部每两个值之间填充长度为dilation-1的数据，相当于增加了卷积核的尺寸。
 
-![size-d](/pic/size-d.gif)
+![size-d](pic/size-d.gif)
 
 综上最终输出输出数据尺寸：
 $$
