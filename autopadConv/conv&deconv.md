@@ -35,7 +35,7 @@
 
 仍以一维数据一维卷积为例，但为展示数据尺寸变化，将输入输出数据通道数设为1，对单个样本：
 
-![size](\pic\size.gif)
+![size](/pic/size.gif)
 
 上述的卷积方式是最常见的，最终输出数据尺寸$ width' = width-kernelsize + 1 $.
 
@@ -76,19 +76,19 @@ conv = nn.Conv1d(in_channels = 3,  #输入通道数
 
   //表示地板除法，即除法后结果向下取整，舍去小数（余数）。
 
-![size-s](\pic\size-s.gif)
+![size-s](/pic/size-s.gif)
 
 - W：进行卷积运算数据的实际尺寸，有 $ W=width +2*padding $.
 
   padding：在原始数据两侧各填充长度为padding的数据，相当于增加了卷积运算数据的尺寸。
 
-![size-p](\pic\size-p.gif)
+![size-p](/pic/size-p.gif)
 
 - K：卷积核的实际尺寸，有 $K= dilation*(kernelsize-1) +1 $.
 
   dilation：对卷积核内部每两个值之间填充长度为dilation-1的数据，相当于增加了卷积核的尺寸。
 
-![size-d](\pic\size-d.gif)
+![size-d](/pic/size-d.gif)
 
 综上最终输出输出数据尺寸：
 $$
