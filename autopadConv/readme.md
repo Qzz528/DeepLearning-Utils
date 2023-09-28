@@ -93,7 +93,7 @@ conv = nn.Conv1d(in_channels = 3,  #输入通道数
 综上最终输出输出数据尺寸：
 
 $$
-width' = [width+2*padding-(dilation*(kernelsize-1) +1)]//stride + 1 \quad\quad      (1)
+width' = ( width+2 * padding-(dilation * (kernelsize-1) +1) )//stride + 1 \quad\quad      (1)
 $$
 
 ```python
