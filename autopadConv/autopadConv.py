@@ -226,7 +226,7 @@ if __name__ == '__main__':
     
     print('---conv2d---')
     x = torch.randn(1,1,300,400)
-    #二维同理，padding为None则h,w两个维度自动填充，否则则指定为None的维度填充
+    #二维同理，padding为None则h,w两个维度自动填充，否则则对指定为None的维度自动填充
     #padding非None则同torch的卷积
     #所有入参如为int，则h,w两个维度均为此参数
     c = Conv2d_autopad(in_channels=1, 
